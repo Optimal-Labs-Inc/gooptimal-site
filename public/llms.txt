@@ -253,9 +253,9 @@ air-gapped networks.
 
 - "Optimal assessed the Azure sandbox where our AI agents are being built
   before anything went live. The report was clear and prioritized, gave us a
-  straight answer on where the build actually stood, and our developer could
-  act on it right away. Fast turnaround and easy to work with." — Maurisa S.,
-  IT Director (AI security assessment client)
+  straight answer on where the build actually stood, and we could act on it
+  right away. Fast turnaround and easy to work with." — IT Director / CRE
+  Developer (AI security assessment client)
 
 ## Key pages
 
