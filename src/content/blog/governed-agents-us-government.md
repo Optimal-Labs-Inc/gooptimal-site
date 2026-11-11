@@ -4,7 +4,7 @@ description: "How government leaders can overcome the impediments to governed au
 date: 2026-11-10
 category: "Trend Report"
 image: "/blog/governed-agents-us-government.png"
-imageAlt: "45% of federal IT leaders report agentic AI in a production workflow, while 8% report a defined incident response framework for it"
+imageAlt: "Column chart: 85% of federal IT leaders expect agentic AI to be mission-critical and 45% run it in production, while defined controls fall from 35% for human review to 6% for vendor governance"
 tags:
   - "agentic AI"
   - "AI security"
@@ -33,6 +33,14 @@ tags:
   @media (min-width: 640px) {
     .tr-row { grid-template-columns: 250px minmax(0, 1fr); align-items: center; gap: 14px; }
   }
+  .tr-glance { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+  .tr-gcol { background: var(--surface-2); padding: 14px 16px 16px; }
+  .tr-gnum { font-family: var(--font-display); font-weight: 600; font-size: 2.2rem; line-height: 1; background: var(--grad-sunset); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .tr-gh { font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--text); margin: 6px 0 10px; }
+  .tr-gcol ul { list-style: none; margin: 0; padding: 0; gap: 0.45em; }
+  .tr-gcol li { font-size: 12.5px; line-height: 1.4; color: var(--text-dim); padding: 0 0 0 12px; position: relative; }
+  .tr-gcol li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border-radius: 50%; background: var(--sunset); opacity: 0.7; }
+  @media (min-width: 640px) { .tr-glance { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 </style>
 
 <nav class="tr-toc" aria-label="In this report">
@@ -50,6 +58,16 @@ tags:
 ## Summary
 
 The federal government does not have an interest problem with AI agents. It has a control problem. Published surveys of federal IT leaders show agents already running in production workflows and near-universal agreement that they will matter to the mission. The same surveys show that most agencies have not yet defined the testing, oversight, incident response, or vendor accountability that production use demands. This report outlines why governed delivery has to come first, the impediments that slow it down, the enablers that make it possible, and six strategies for getting agents into production without outrunning the controls.
+
+<figure class="tr-fig" aria-label="The report at a glance: four impediments, five enablers, six strategies">
+  <div class="tr-fig-k">At a glance</div>
+  <div class="tr-fig-t">Four impediments, five enablers, six strategies</div>
+  <div class="tr-glance">
+    <div class="tr-gcol"><div class="tr-gnum">4</div><div class="tr-gh">Impediments</div><ul><li>Authorization built for systems that hold still</li><li>Identities designed for people</li><li>Workflows built around human handoffs</li><li>Prompt injection with no complete fix</li></ul></div>
+    <div class="tr-gcol"><div class="tr-gnum">5</div><div class="tr-gh">Enablers</div><ul><li>Identity</li><li>Enforcement</li><li>Evidence</li><li>People</li><li>Measurement</li></ul></div>
+    <div class="tr-gcol"><div class="tr-gnum">6</div><div class="tr-gh">Strategies</div><ul><li>Start where actions are reversible</li><li>Bound the authorization blast radius</li><li>Enforce outside the agent's reach</li><li>Treat model, tool, and prompt changes as changes</li><li>Write the stop procedure first</li><li>Buy accountability into the contract</li></ul></div>
+  </div>
+</figure>
 
 ## Federal leaders are committed to agents but controls lag adoption
 
