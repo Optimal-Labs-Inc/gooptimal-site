@@ -80,6 +80,14 @@ This gap is not due to a lack of seriousness. Respondents in the Market Connecti
   <div class="tr-src">Two separate surveys with different respondents and wording; rows are not directly comparable across sources. ICF: ICF and MeriTalk, "The Agentic Future," October 2026, 100 federal IT decision-makers. MC: Market Connections, sponsored by ServiceNow, March survey of more than 200 government technology executives, reported by Nextgov/FCW, May 2026.</div>
 </figure>
 
+### Agile hit the same wall
+
+Government has been here before. Forrester's trend report [Delivering Agile In The US Government](https://reprint.forrester.com/reports/delivering-agile-in-the-us-government-cefae9a8/index.html) describes the same shape for agile delivery. In Forrester's 2023 Developer Survey, 84% of US public-sector developers agreed that their senior executives embrace agile ways of working, yet its later data shows few federal development teams practicing agile proficiently across the board. Forrester's analysts call it an adoption problem and not an innovation problem.
+
+The impediments Forrester names for agile will sound familiar to anyone trying to field an agent: cultural resistance mixed with legitimate security and compliance concerns, acquisition and budgeting built for waterfall, a federated structure that is hard to move, and mission systems that cannot be handed over to experiments. Agents run into every one of them. The lesson agile taught is that executive commitment does not close the gap by itself. The machinery around the team has to change too: how work is approved, bought, tested, and released.
+
+Agents also raise the stakes in a way agile never did. An agile team that ships a bad increment still ships something a person wrote and a person deployed. An agent acts on its own, with credentials, at machine speed. A slow agile adoption costs time. An ungoverned agent adoption costs trust.
+
 ### Why governed delivery has to come first
 
 Agencies face real pressure to move, and the mission case for agents is strong. But the public's trust is the asset every federal program spends, and an agent that acts without bounds spends it quickly. Governing agents before scaling them is critical because:
@@ -90,7 +98,7 @@ Agencies face real pressure to move, and the mission case for agents is strong. 
 
 ## Four impediments add friction to agent delivery in government
 
-Government leaders must overcome four impediments to move agents from pilot to production responsibly:
+The impediments that slowed agile still apply. On top of them, government leaders must overcome four that are specific to agents before moving from pilot to production responsibly:
 
 1. **Authorization was built for systems that hold still.** Federal authorization assesses a system at a point in time and then monitors it for drift. An agent's behavior shifts with every model version, tool manifest change, prompt revision, and memory write. None of those look like a configuration change to a traditional change board, yet any of them can alter what the system does. A process that certifies a snapshot will always be describing an agent that no longer exists.
 2. **Agents inherit identities that were designed for people.** Many early deployments run an agent on a shared service account or on the invoking user's full permissions. The agent then holds far more authority than the task needs, and the audit log cannot separate what the person did from what the agent did. In the ICF and MeriTalk report, 51% named agent-specific identity and access controls as a safeguard they need before letting agents coordinate across systems.
@@ -132,6 +140,7 @@ This report is a synthesis of published research and Optimal's own engineering w
 - Market Connections, sponsored by ServiceNow, March survey of more than 200 government technology executives, as [reported by Nextgov/FCW](https://www.nextgov.com/artificial-intelligence/2026/05/survey-more-half-federal-agencies-now-planning-agentic-ai-pilots/413324/), May 5, 2026. Market Connections is a business division of GovExec, the parent of Nextgov/FCW.
 - OMB, [2025 Federal Agency AI Use Case Inventory](https://github.com/ombegov/2025-Federal-Agency-AI-Use-Case-Inventory), consolidated summary as of April 13, 2026.
 - GAO, [Artificial Intelligence: Generative AI Use and Management at Federal Agencies](https://www.gao.gov/products/gao-25-107653) (GAO-25-107653), July 29, 2025.
+- Forrester, [Delivering Agile In The US Government](https://reprint.forrester.com/reports/delivering-agile-in-the-us-government-cefae9a8/index.html), trend report by Devin Dickerson with three contributors, read as a publicly available licensed reprint. Cited for the agile comparison only. The agent findings and recommendations in this report are not Forrester's.
 
 Read the survey figures as directional. Both surveys are industry-run, the samples are small, and they define adoption differently: the Market Connections survey found 15% of agencies implementing agentic AI or finished doing so, while the later ICF and MeriTalk report found 45% using it in at least one production workflow. The federal inventories cover all AI use cases and do not break out agents.
 
