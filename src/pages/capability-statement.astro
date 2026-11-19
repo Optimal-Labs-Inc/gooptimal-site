@@ -7,7 +7,6 @@ import {
   CAGE,
   UEI,
   NAICS_CODES,
-  RPO_STATUS,
   PAST_PERFORMANCE,
   pending,
 } from "../data/company.ts";
@@ -20,39 +19,39 @@ import {
 
 const competencies = [
   {
-    title: "Managed Microsoft 365 GCC High",
-    body: "Design, build, migration, and ongoing management of CMMC-ready GCC High environments for contractors handling CUI and ITAR-controlled data. Tenant provisioning and hardening, Entra ID and Conditional Access, Defender and Purview, migration with spillage controls, and sustained operations after go-live. The tenant is registered to the client; Optimal manages it.",
+    title: "Governed AI infrastructure",
+    body: "Resilient AI infrastructure for operators of critical systems: one authenticated gateway to every approved model, per-key virtual credentials, fail-closed prompt and response guardrails, default-deny egress, and a request-ID-joined audit trail. Deployed in the client's cloud, on-prem, or air-gapped, and client-owned.",
   },
   {
-    title: "CMMC readiness & NIST SP 800-171 engineering",
-    body: "Implementation of the 110-control set inside the enclave, System Security Plan authoring, POA&M tracking, evidence collection, and a Shared Responsibility Matrix documenting the External Service Provider relationship required under 32 CFR 170.",
+    title: "AI threat detection",
+    body: "Inline detection of AI-driven and emerging threats on every prompt and response: prompt injection, jailbreaks, sensitive-data and secret exfiltration, and agent or tool-use abuse, blocked fail-closed before reaching a model or system.",
   },
   {
-    title: "Governed AI engineering",
-    body: "A Zero Trust access layer for AI in the cloud the client already licenses — one authenticated gateway to every approved model, per-key virtual credentials, fail-closed prompt and response guardrails, default-deny egress, and a request-ID-joined audit trail. Self-hostable and client-owned.",
+    title: "Software & AI supply chain security",
+    body: "Supply-chain security across the entire stack with 9line: SBOM and AI-BOM generation, vulnerability scanning with EPSS and CISA KEV enrichment, reachability analysis, and machine-readable VEX evidence covering code, open-source packages, container images, and AI models.",
   },
   {
     title: "AI security assessment & adversarial testing",
-    body: "Structured evaluation and offensive red-team testing of AI-enabled systems and agents — prompt injection, system-prompt extraction, model and context manipulation, data and model exfiltration, and excessive-agency chains. Measured to the OWASP LLM Top 10, MITRE ATLAS, and the NIST AI RMF.",
+    body: "Structured evaluation and offensive red-team testing of AI-enabled systems and agents: prompt injection, system-prompt extraction, model and context manipulation, data and model exfiltration, and excessive-agency chains. Measured to the OWASP LLM Top 10, MITRE ATLAS, and the NIST AI RMF.",
   },
 ];
 
 const differentiators = [
   {
-    title: "The compliant environment and the AI inside it, from one vendor",
-    body: "Most GCC High providers migrate mailboxes and stop. Most AI security firms have never stood up an enclave. Optimal does both, which is why the governed path can be made the fastest path instead of the one users route around.",
+    title: "The infrastructure, the detection, and the supply chain, from one vendor",
+    body: "Most AI vendors sell a model or a dashboard. Optimal builds the resilient foundation, the AI that watches it, and the supply-chain record underneath it, so the governed path is also the fastest one.",
   },
   {
-    title: "The client owns the tenant",
-    body: "Not a hosted enclave. The GCC High subscription, the data, the keys, and the audit logs are registered to the client. Replacing Optimal does not mean migrating CUI out of a vendor's boundary.",
+    title: "The client owns the environment",
+    body: "Not a hosted service. The infrastructure, the data, the keys, and the audit logs belong to the client. Replacing Optimal does not mean migrating data out of a vendor's boundary.",
   },
   {
     title: "Published reference architecture",
-    body: "The control pattern Optimal implements is open source and inspectable before an engagement starts, and the client keeps operating it afterward. 9line, the AI-native supply-chain security reference implementation, runs inside the client boundary and is air-gap capable.",
+    body: "The control pattern Optimal implements is open source and inspectable before an engagement starts, and the client keeps operating it afterward. 9line, the AI-native supply-chain security platform, runs inside the client boundary and is air-gap capable.",
   },
   {
     title: "Independence preserved",
-    body: "Optimal engineers environments to be assessment-ready. Optimal is not a C3PAO, does not perform certified CMMC assessments, and does not grant Authority to Operate. Building the environment and grading it are deliberately separate roles.",
+    body: "Optimal builds systems to stand up to an independent assessment. Optimal does not perform that assessment and does not grant authorizations. Building the environment and grading it are deliberately separate roles.",
   },
 ];
 
@@ -62,7 +61,6 @@ const companyData = [
   { k: "UEI", v: UEI },
   ...(pending(NAICS_CODES) ? [] : [{ k: "NAICS", v: NAICS_CODES }]),
   { k: "Set-aside status", v: "SDVOSB and VOSB — SBA-certified via VetCert" },
-  ...(pending(RPO_STATUS) ? [] : [{ k: "Cyber AB", v: RPO_STATUS }]),
   { k: "Contact", v: "ryan@gooptimal.io" },
   { k: "Website", v: "gooptimal.io" },
 ];
@@ -70,8 +68,8 @@ const companyData = [
 
 <Layout
   title="Capability statement — Optimal, LLC (SDVOSB)"
-  description="Capability statement for Optimal, LLC — an SBA-certified Service-Disabled Veteran-Owned Small Business delivering managed Microsoft 365 GCC High enclaves, CMMC readiness and NIST SP 800-171 engineering, governed AI engineering, and AI security assessment. CAGE 14HQ0 · UEI TYMSGKDF2K48."
-  keywords="Optimal LLC capability statement, SDVOSB capability statement, CAGE 14HQ0, UEI TYMSGKDF2K48, managed GCC High, CMMC Level 2, NIST SP 800-171, governed AI, AI security, defense industrial base, set-aside contractor"
+  description="Capability statement for Optimal, LLC — an SBA-certified Service-Disabled Veteran-Owned Small Business delivering governed AI infrastructure for critical infrastructure, AI threat detection, software and AI supply-chain security, and AI security assessment. CAGE 14HQ0 · UEI TYMSGKDF2K48."
+  keywords="Optimal LLC capability statement, SDVOSB capability statement, CAGE 14HQ0, UEI TYMSGKDF2K48, governed AI, critical infrastructure security, AI threat detection, supply chain security, SBOM, VEX, AI security, set-aside contractor"
   breadcrumbs={[{ name: "Home", href: "/" }]}
 >
   <Header />
@@ -83,9 +81,9 @@ const companyData = [
           <span class="eyebrow">Capability statement</span>
           <h1 class="h2">Optimal, LLC</h1>
           <p class="lead" style="margin-top:14px;">
-            Managed Microsoft&nbsp;365 GCC&nbsp;High enclaves for the defense industrial base — and the
-            governed AI that runs safely inside them. An SBA-certified Service-Disabled Veteran-Owned
-            Small Business.
+            Governed AI for critical infrastructure: resilient systems, AI that detects AI-driven and
+            emerging threats, and supply-chain security across the entire stack. An SBA-certified
+            Service-Disabled Veteran-Owned Small Business.
           </p>
         </div>
         <VetBadge size={96} />
@@ -131,8 +129,8 @@ const companyData = [
         ) : (
           <p class="muted cap-note">
             References available on request. Optimal does not publish customer names or engagement
-            details without written permission — including, and especially, for work inside a CUI
-            boundary.
+            details without written permission — including, and especially, for work on critical
+            systems.
           </p>
         )}
       </section>
@@ -148,14 +146,14 @@ const companyData = [
           ))}
         </dl>
         <p class="muted cap-note">
-          Optimal engineers environments to be assessment-ready. Optimal is not a C3PAO, does not
-          perform certified CMMC assessments, and does not grant an Authority to Operate.
+          Optimal builds systems to stand up to an independent assessment. Optimal does not perform
+          that assessment and does not grant authorizations.
         </p>
       </section>
 
       <div class="cap-cta">
         <a href="/contact" class="btn btn-primary">Book a scoping call →</a>
-        <a href="/gcc-high" class="btn btn-ghost">Managed GCC High</a>
+        <a href="/nineline" class="btn btn-ghost">Explore 9line</a>
       </div>
     </div>
   </section>

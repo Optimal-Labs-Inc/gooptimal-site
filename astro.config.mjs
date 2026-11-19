@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 // Static marketing site. `site` is the production origin — used for canonical
 // URLs, absolute OG/JSON-LD URLs, and the generated sitemap.
 /** Pages that are noindex while unfinished — kept out of the sitemap. */
-const DRAFT_PAGES = ["/resources/gcc-high-cost-guide/"];
+const DRAFT_PAGES = [];
 
 /**
  * Writes dist/llms-full.txt after every build — the llms.txt index plus the
@@ -40,10 +40,15 @@ export default defineConfig({
   // /demo → the old "request access" flow, now the scoping-call form at /contact.
   // /industries/* → retired vertical pages, replaced by deployment-scenario use
   //   cases — except SLED, which now has a real landing page again at /sled.
+// GCC High pages → retired when Optimal repositioned on governed AI for
+//   critical infrastructure; they land on the homepage.
   redirects: {
     "/demo": "/contact",
     "/industries/healthcare": "/use-cases/regulated-cloud",
     "/industries/financial-services": "/use-cases/regulated-cloud",
     "/industries/sled": "/sled",
+    "/gcc-high": "/",
+    "/do-i-need-gcc-high": "/",
+    "/resources/gcc-high-cost-guide": "/",
   },
 });
