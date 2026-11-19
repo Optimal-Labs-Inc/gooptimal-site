@@ -7,7 +7,7 @@ import VetBadge from "../components/VetBadge.astro";
 
 // ---------------------------------------------------------------------------
 // Leadership facts. Everything rendered below is asserted publicly on a site
-// that sells to the defense industrial base — so nothing here is inferred or
+// that sells to operators of critical infrastructure — so nothing here is inferred or
 // approximated. Entries are seeded with the credentials Ryan named, but each
 // one renders only once its `detail` stops being a {{TOKEN}} placeholder.
 //
@@ -24,8 +24,7 @@ const service: { label: string; detail: string }[] = [
 const credentials: { label: string; detail: string }[] = [
   { label: "Security clearance", detail: "TS/SCI" },
   { label: "CISSP · CCSP", detail: "ISC2" },
-  { label: "Certified CMMC Professional (CCP)", detail: "Cyber AB" },
-  { label: "CMMC assessment experience", detail: "C3PAO lead assessor" },
+  { label: "Third-party assessment experience", detail: "Lead security assessor" },
 ];
 
 // Anything still holding a placeholder stays off the page.
@@ -43,19 +42,19 @@ const principles = [
     idx: "01",
     accent: "var(--sunset)",
     title: "Adversary-informed, not compliance-driven",
-    body: "A control that passes an audit and fails an attacker is a liability with paperwork. We start from how these systems actually get broken, then map the result back to NIST SP 800-171, CMMC, and the AI RMF — in that order.",
+    body: "A control that passes an audit and fails an attacker is a liability with paperwork. We start from how these systems actually get broken, then map the result back to NIST CSF, the AI RMF, and the controls you answer to — in that order.",
   },
   {
     idx: "02",
     accent: "var(--steel)",
     title: "Sovereign by default",
-    body: "Your enclave, your tenancy, your keys, your logs. We build and run the environment; we do not become a dependency you can't remove. Nothing about the way we work should make your data harder to control.",
+    body: "Your infrastructure, your tenancy, your keys, your logs. We build and run the environment; we do not become a dependency you can't remove. Nothing about the way we work should make your data harder to control.",
   },
   {
     idx: "03",
     accent: "var(--seafoam)",
     title: "Honest about the line we don't cross",
-    body: "We engineer environments to be assessment-ready and we say so plainly. Optimal is not a C3PAO and does not grant an ATO — that assessment is independent, by design, and any firm that blurs it is selling you risk.",
+    body: "We build systems to stand up to an independent assessment, and we say plainly that the assessment is not ours to give. Building an environment and grading it are separate roles by design, and any firm that blurs them is selling you risk.",
   },
 ];
 
@@ -74,14 +73,14 @@ const personSchema = {
     url: "https://gooptimal.io",
   },
   description:
-    "Ryan Gutwein is the founder and CEO of Optimal, LLC, an SBA-certified Service-Disabled Veteran-Owned Small Business that builds and manages CMMC-ready Microsoft 365 GCC High enclaves for the defense industrial base and stands up the governed AI that runs inside them.",
+    "Ryan Gutwein is the founder and CEO of Optimal, LLC, an SBA-certified Service-Disabled Veteran-Owned Small Business that builds governed AI infrastructure for critical infrastructure: resilient systems, AI that detects AI-driven and emerging threats, and supply-chain security across the entire stack.",
 };
 ---
 
 <Layout
   title="Team — Ryan Gutwein, Founder & CEO of Optimal"
-  description="Optimal is led by founder and CEO Ryan Gutwein, a service-disabled veteran. Optimal, LLC is an SBA-certified Service-Disabled Veteran-Owned Small Business (SDVOSB) building and managing CMMC-ready GCC High enclaves and governed AI for the defense industrial base."
-  keywords="Ryan Gutwein, Optimal LLC founder, Optimal CEO, SDVOSB leadership, service-disabled veteran owned, GCC High MSP leadership, defense industrial base, CMMC, governed AI"
+  description="Optimal is led by founder and CEO Ryan Gutwein, a service-disabled veteran. Optimal, LLC is an SBA-certified Service-Disabled Veteran-Owned Small Business (SDVOSB) building governed AI infrastructure, AI threat detection, and supply-chain security for critical infrastructure."
+  keywords="Ryan Gutwein, Optimal LLC founder, Optimal CEO, SDVOSB leadership, service-disabled veteran owned, governed AI, critical infrastructure security, AI threat detection, supply chain security"
   breadcrumbs={[{ name: "Home", href: "/" }]}
   jsonLd={[personSchema]}
 >
@@ -96,7 +95,7 @@ const personSchema = {
       <h1 class="display">The person<br /><span class="grad">accountable for the work.</span></h1>
       <p class="lead">
         Optimal is deliberately small. The people who scope an engagement are the people who build
-        the enclave and answer the phone when something breaks &mdash; there is no layer between the
+        the system and answer the phone when something breaks &mdash; there is no layer between the
         sales conversation and the engineering.
       </p>
     </div>
@@ -129,30 +128,30 @@ const personSchema = {
         <div class="fbody">
           <span class="ix">From the founder</span>
           <p class="fpull">
-            &ldquo;The defense industrial base was handed two problems at once &mdash; prove you can
-            hold CUI, and adopt AI without losing control of it. Most firms will sell you one and
-            quietly make the other worse.&rdquo;
+            &ldquo;Critical infrastructure was handed two problems at once &mdash; adopt AI without
+            losing control of it, and defend against adversaries who are already using it. Most
+            firms will sell you one and quietly make the other worse.&rdquo;
           </p>
           <div class="fprose">
             <p>
               I started Optimal to do both jobs properly, and to do them in the customer&rsquo;s own
-              environment. We build, migrate, and run CMMC-ready Microsoft 365 GCC High enclaves for
-              contractors handling CUI and ITAR-controlled data &mdash; and then we stand up the
-              governed access layer that lets frontier models be genuinely useful inside that
-              boundary instead of routing around it.
+              environment. We build the governed AI infrastructure that critical systems run on,
+              engineered to stay up when something upstream fails, and we deploy AI that detects
+              AI-driven and emerging threats against it. Underneath both, we secure the supply chain
+              across the entire stack, from code and packages to containers and models.
             </p>
             <p>
-              Those two things belong to the same problem. An enclave that people work around is not
+              Those things belong to the same problem. A boundary that people work around is not
               a boundary, it is a formality. Once a team has a real reason to paste controlled data
               into an unapproved tool, every control upstream of that moment stops counting. So the
               answer is not to ban the capability &mdash; it is to make the governed path the fastest
               one: authenticated gateway, prompt guardrails, default-deny egress, and an auditable
-              trail that stands up in an assessment.
+              trail that stands up to scrutiny.
             </p>
             <p>
-              We are also clear about what we are not. Optimal engineers environments to be
-              assessment-ready; the certified assessment is performed independently by a C3PAO, and
-              we do not grant authorizations. That separation exists for good reasons, and we would
+              We are also clear about what we are not. Optimal builds systems to stand up to an
+              independent assessment; we do not perform that assessment, and we do not grant
+              authorizations. That separation exists for good reasons, and we would
               rather explain it up front than be the vendor who let a customer misunderstand their
               own position.
             </p>
@@ -251,12 +250,12 @@ const personSchema = {
     <div class="container z cta-inner">
       <h2 class="display" style="font-size:clamp(2rem,5vw,3.4rem);">Talk to the person<br />doing the work.</h2>
       <p class="lead" style="margin:18px auto 0;">
-        Scoping calls are run by the founder, not a sales team. Bring your contract requirements and
+        Scoping calls are run by the founder, not a sales team. Bring the systems you run and
         your environment as it actually is &mdash; we&rsquo;ll tell you what it takes.
       </p>
       <div class="cta-row" style="justify-content:center;">
         <a href="/contact" class="btn btn-primary" style="margin-top:28px;">Book a scoping call &rarr;</a>
-        <a href="/gcc-high" class="btn btn-ghost" style="margin-top:28px;">Managed GCC High</a>
+        <a href="/nineline" class="btn btn-ghost" style="margin-top:28px;">Explore 9line</a>
       </div>
     </div>
   </section>

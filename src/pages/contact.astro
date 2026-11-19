@@ -28,7 +28,7 @@ const contactSchema = {
   name: "Book a scoping call with Optimal",
   url: "https://gooptimal.io/contact",
   description:
-    "Scope a managed GCC High enclave, a CMMC readiness engagement, or an AI security assessment with Optimal. Calls are run by the founder directly.",
+    "Scope governed AI infrastructure, AI threat detection and red-teaming, or supply-chain security with Optimal. Calls are run by the founder directly.",
   mainEntity: {
     "@type": "Organization",
     name: "Optimal",
@@ -46,8 +46,8 @@ const contactSchema = {
 ---
 
 <Layout
-  title="Book a scoping call — managed GCC High & AI security | Optimal"
-  description="Scope a managed Microsoft 365 GCC High enclave, CMMC Level 2 readiness, or an AI security assessment. Tell us your contracts, your data, and your environment — GovCloud, commercial cloud, on-prem, or air-gapped. Calls are run by the founder directly."
+  title="Book a scoping call | Governed AI for critical infrastructure | Optimal"
+  description="Scope governed AI infrastructure, AI threat detection and red-teaming, or supply-chain security across the entire stack. Tell us the systems you run and your environment: cloud, on-prem, or air-gapped. Calls are run by the founder directly."
   breadcrumbs={[{ name: "Home", href: "/" }]}
   jsonLd={[contactSchema]}
 >
@@ -61,10 +61,10 @@ const contactSchema = {
         <span class="eyebrow">Book a scoping call</span>
         <h1 class="h2">Let&rsquo;s scope the work.</h1>
         <p class="lead" style="margin-top:16px;">
-          Tell us the contracts you&rsquo;re chasing, the data you handle, and where you
-          are today. We&rsquo;ll scope the right engagement — a managed GCC&nbsp;High
-          environment, CMMC readiness, an AI assessment or red team, or governed AI
-          engineering — across GovCloud, commercial cloud, on-prem, or air-gapped.
+          Tell us the systems you run, the threats you&rsquo;re worried about, and where you
+          are today. We&rsquo;ll scope the right engagement: governed AI infrastructure,
+          AI threat detection and red-teaming, or supply-chain security with 9line, in
+          your cloud, on-prem, or air-gapped.
         </p>
         <p class="muted email">
           Prefer email? <a href="mailto:ryan@gooptimal.io">ryan@gooptimal.io</a>
@@ -111,13 +111,12 @@ const contactSchema = {
           <label>Organization<input type="text" name="organization" /></label>
           <label>Environment
             <select name="boundary">
-              <option>Commercial Microsoft 365</option>
-              <option>GCC</option>
-              <option>GCC High</option>
-              <option>FedRAMP</option>
-              <option>IL4 / IL5</option>
-              <option>IL6</option>
-              <option>On-prem / air-gapped</option>
+              <option>Commercial cloud (Azure, AWS, GCP)</option>
+              <option>Government cloud</option>
+              <option>On-prem</option>
+              <option>Air-gapped / OT network</option>
+              <option>Hybrid</option>
+              <option>Not sure yet</option>
             </select>
           </label>
         </div>

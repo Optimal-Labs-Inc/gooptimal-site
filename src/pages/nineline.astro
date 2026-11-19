@@ -71,23 +71,23 @@ const sources = [
   },
 ];
 
-// Why this matters specifically to the defense industrial base.
+// Why this matters specifically to critical infrastructure.
 const dib = [
   {
-    n: "SWFT & SBOM mandates",
+    n: "SBOM mandates are here",
     d: "DoW's Software Fast Track moved from pilot to an evolving requirement in January 2026: machine-readable SBOMs that update with every code change, plus continuous risk artifacts. The Army now demands actual SBOM data, not self-attestations, and OMB M-26-05 lets agencies request raw SBOMs. 9line produces exactly those artifacts — the SBOM, the reachability-ranked findings, and the VEX record.",
   },
   {
     n: "Evidence that survives an audit",
-    d: "A verdict that suppresses a vulnerability alert has to be defensible — to your assessor, your AO, and your program office. Every 9line determination carries the call chain, the tool trace, and the record it was derived from, exported as VEX your reviewers can re-derive.",
+    d: "A verdict that suppresses a vulnerability alert has to be defensible — to your auditors, your regulators, and the operators who depend on the system. Every 9line determination carries the call chain, the tool trace, and the record it was derived from, exported as VEX your reviewers can re-derive.",
   },
   {
-    n: "Continuous ATO",
-    d: "DoD is moving from point-in-time authorization to continuous monitoring. The drift → reachability → gated-remediation loop is exactly that posture, running on your own infrastructure.",
+    n: "Continuous, not point-in-time",
+    d: "Critical systems change constantly, and a quarterly scan is stale the day after it runs. The drift → reachability → gated-remediation loop keeps the picture current, running on your own infrastructure.",
   },
   {
-    n: "CMMC & the AI bill of materials",
-    d: "CMMC's asset-inventory and vulnerability-management controls still gate DoD business even with Phase II third-party assessments suspended — NIST 800-171 obligations under DFARS 252.204-7012 are unchanged. And while the DIB adopts AI fast, the AI-BOM view surfaces the model license and provenance conflicts that stop a deployment.",
+    n: "The AI bill of materials",
+    d: "Critical infrastructure is adopting AI fast, and models are now part of the supply chain. The AI-BOM view inventories every model in use and surfaces the license and provenance conflicts that should stop a deployment before it reaches production.",
   },
 ];
 
@@ -120,7 +120,7 @@ const ninelineSchema = {
 <Layout
   title="9line — AI-native software & supply-chain security from Optimal"
   description="9line is Optimal's AI-native application and supply-chain security platform: real SBOM and vulnerability scanning, EPSS and CISA KEV enrichment, and frontier-model reachability analysis that turns thousands of raw findings into an evidence-backed action queue and an exportable VEX record. Deployed in your environment — sovereign by default, air-gap capable."
-  keywords="AI supply chain security, SBOM, VEX, reachability analysis, CISA KEV, EPSS, AI-BOM, SWFT, continuous ATO, CMMC, defense industrial base"
+  keywords="AI supply chain security, SBOM, VEX, reachability analysis, CISA KEV, EPSS, AI-BOM, software supply chain security, critical infrastructure, continuous monitoring, governed AI"
   breadcrumbs={[{ name: "Home", href: "/" }]}
   jsonLd={[ninelineSchema]}
 >
@@ -242,13 +242,13 @@ const ninelineSchema = {
     <div class="glow"></div>
     <div class="container z">
       <div class="sec-head wide">
-        <span class="ix">Defense industrial base</span>
-        <h2 class="h2">Built for the mandates the DIB is already under.</h2>
+        <span class="ix">Critical infrastructure</span>
+        <h2 class="h2">Built for systems that can&rsquo;t afford a bad verdict.</h2>
         <p class="lead" style="margin-top:14px;">
-          The department no longer wants a scan report &mdash; it wants living SBOMs, adjudicated
-          findings, and artifacts it can reuse. Reachability and mission context match how programs
-          actually triage: mission assurance, not raw CVSS. And it runs air-gapped &mdash;
-          reachability reads source, so nothing has to leave the enclave.
+          Operators no longer want a scan report &mdash; they want living SBOMs, adjudicated
+          findings, and evidence they can reuse. Reachability and mission context match how critical
+          systems actually triage: mission assurance, not raw CVSS. And it runs air-gapped &mdash;
+          reachability reads source, so nothing has to leave your network.
         </p>
       </div>
       <div class="dib-grid">
@@ -260,8 +260,8 @@ const ninelineSchema = {
         ))}
       </div>
       <p class="muted note">
-        Regulatory timelines move quickly &mdash; we&rsquo;ll scope current enforcement to your
-        specific contracts and environment.
+        Requirements move quickly &mdash; we&rsquo;ll scope what applies to your specific
+        sector and environment.
       </p>
     </div>
   </section>

@@ -1,10 +1,10 @@
 # Optimal, LLC
 
-> Optimal secures and governs AI wherever regulated data lives — defense,
-> healthcare, financial services, and state & local government. It builds,
-> migrates, and manages CMMC-ready Microsoft 365 GCC High enclaves for the
-> United States defense industrial base, stands up the governed AI that runs
-> safely inside compliance boundaries, and makes 9line, an AI-native
+> Optimal builds governed AI infrastructure for critical infrastructure. It
+> engineers systems to stay resilient, deploys AI that detects AI-driven and
+> other emerging threats against them, and secures the software and AI supply
+> chain across the entire stack, from code and open-source packages to
+> container images and AI models. Its platform, 9line, is an AI-native
 > application and supply-chain security platform deployed in the client's own
 > environment. Optimal is an SBA-certified Service-Disabled Veteran-Owned Small
 > Business (SDVOSB). Sovereign by default.
@@ -18,8 +18,12 @@
 - **Contact:** ryan@gooptimal.io
 - **Business model:** Advisory- and services-led engagements. Optimal delivers
   scoped engagements and managed operations, not a software subscription.
-- **Where Optimal works:** Microsoft 365 GCC High, Azure Government, commercial
-  cloud (Azure, AWS, GCP), on-premises, and fully air-gapped networks.
+- **Who Optimal serves:** operators of critical infrastructure and the teams
+  that build for them: energy and utilities, water, transportation,
+  communications, healthcare, financial services, the defense industrial base,
+  and federal, state, local, and education agencies.
+- **Where Optimal works:** commercial cloud (Azure, AWS, GCP), government
+  cloud, on-premises, and fully air-gapped networks.
 - **CAGE code:** 14HQ0
 - **UEI:** TYMSGKDF2K48
 - **Capability statement:** https://gooptimal.io/capability-statement
@@ -41,88 +45,60 @@
   certification registry at https://search.certifications.sba.gov/.
 - Eligible to compete for **SDVOSB and VOSB set-aside contracts**.
 
-## What Optimal does — two pillars
+## What Optimal does — three pillars
 
-Optimal does two things that are designed to work together: it builds and runs
-the compliant environment, and it makes frontier AI genuinely usable inside
-that environment.
+Optimal does three things that are designed to work together: it builds the
+resilient foundation, it deploys AI that watches it, and it secures the supply
+chain underneath it.
 
-### Pillar 1 — Managed Microsoft 365 GCC High enclaves (for the defense industrial base)
-
-- **Build the enclave.** A compliant Microsoft 365 GCC High tenant — Entra ID,
-  Conditional Access, Defender, and Purview configured to a CUI-ready baseline
-  from day one.
-- **Migrate cleanly.** Mailboxes, files, Teams, and identities moved from
-  Microsoft 365 Commercial or GCC into GCC High with spillage controls, so no
-  CUI is left in the wrong boundary.
-- **Engineer the controls.** The NIST SP 800-171 control set implemented and
-  documented — System Security Plan (SSP) and POA&M, evidence collected — ready
-  for a third-party CMMC Level 2 assessment.
-- **Run it.** Ongoing administration, patching, monitoring, user lifecycle,
-  security operations, and help desk. Optimal also sources and provisions GCC
-  High G5 licensing.
-- **Aligned to:** DFARS 252.204-7012, NIST SP 800-171, CMMC Level 2. Supports
-  CUI and ITAR / export-controlled data.
-
-**Delivery model — this is the part vendors differ on.** Optimal manages the
-client's own GCC High tenant. It is not a hosted enclave: the subscription is
-registered to the client, and the data, keys, and audit logs stay under the
-client's control. Replacing Optimal does not require migrating CUI out of a
-vendor's boundary. Licensing is scoped to the client's actual CUI footprint —
-only the users who handle CUI need GCC High seats, and the rest of the business
-can remain on commercial Microsoft 365 with the boundary enforced between them.
-
-**Cost structure.** A managed GCC High engagement prices as three lines: a
-fixed-scope build and migration project; a monthly per-user managed-operations
-fee; and Microsoft licensing (GCC High G3 or G5) at Microsoft's per-seat list
-price. Microsoft raised GCC High list pricing in July 2026 — roughly 8% on G3
-and 5% on G5.
-
-**External Service Provider (ESP) relationship.** Under 32 CFR 170 an MSP/ESP
-relationship must be documented in the client's System Security Plan, and
-assessors expect a Customer Responsibility Matrix. Optimal delivers a Shared
-Responsibility Matrix with every managed engagement, mapping all 110 NIST SP
-800-171 controls to Optimal-owned, client-owned, or shared, with the supporting
-evidence artifact, maintained as the environment changes.
-
-**Vulnerability management and evidence.** The managed service includes
-9line — continuous SBOM, reachability-ranked findings, CISA KEV and EPSS
-enrichment, and assessment-ready artifacts — running inside the client's
-boundary and air-gap capable.
-
-### Pillar 2 — Governed AI and AI security
+### Pillar 1 — Resilient, governed AI infrastructure
 
 - **Governed AI Engineering** (signature engagement) — a Zero Trust access layer
-  for AI in the cloud the client already licenses: one authenticated gateway to
-  every approved model, per-key virtual credentials and rate limits, fail-closed
-  prompt and response guardrails, default-deny egress pinned to an allowlist,
-  and a request-ID-joined audit trail reviewers read directly. Self-hostable and
-  client-owned; no SDK rewrite, no new accreditation boundary.
+  for AI: one authenticated gateway to every approved model, per-key virtual
+  credentials and rate limits, fail-closed prompt and response guardrails,
+  default-deny egress pinned to an allowlist, and a request-ID-joined audit
+  trail reviewers read directly. Self-hostable and client-owned; no SDK rewrite.
+- **Built to stay up.** Deployed in the client's cloud, on-premises, or fully
+  air-gapped, and designed so a failure upstream degrades safely instead of
+  taking critical systems with it.
+
+### Pillar 2 — AI threat detection
+
+- **Inline detection** on every prompt and response: direct and indirect prompt
+  injection, jailbreaks, sensitive-data and secret exfiltration, and agents
+  reaching for tools or resources they were never granted. Requests that fail
+  are blocked fail-closed, before they reach a model or a system.
 - **AI Security Assessment** — structured evaluation of AI systems, pipelines,
   and integrations against real adversary attack paths. Covers prompt trust
   boundaries, retrieval/RAG pipelines, tool- and function-call authorization,
   output handling, and secret/PII/training-data exposure. Findings mapped to the
   OWASP LLM Top 10 and MITRE ATLAS.
-- **Adversarial AI Testing (red team)** — direct and indirect prompt injection,
-  jailbreaks and system-prompt extraction, model and context manipulation, data
-  and model exfiltration, and agent abuse / excessive-agency chains, with
-  reproducible attack chains and the control that closes each one.
+- **Adversarial AI Testing (red team)** — jailbreaks and system-prompt
+  extraction, model and context manipulation, data and model exfiltration, and
+  agent abuse / excessive-agency chains, with reproducible attack chains and the
+  control that closes each one.
 - **Secure AI Adoption Advisory** — usage patterns, threat models, and
   secure-adoption roadmaps scoped to the organization's risk profile.
+
+### Pillar 3 — Supply-chain security across the entire stack
+
+- **9line** inventories everything a system is built from: application code,
+  open-source packages, container images and their OS layers, and the AI models
+  in use (AI-BOM).
+- **Reachability, not noise.** Vulnerability findings are enriched with EPSS
+  and CISA KEV and checked for whether a vulnerable path is actually reachable,
+  so teams act on what matters.
+- **Evidence others can verify.** Every determination is recorded as
+  machine-readable VEX that downstream teams and tools can re-derive.
 
 ## Scope boundary — what Optimal does not do
 
 This matters for accuracy, and Optimal states it publicly:
 
-- Optimal is **not a C3PAO** and does not perform certified CMMC assessments.
-- Optimal **does not grant an Authority to Operate (ATO)** and does not issue
-  certifications.
-- **No environment makes an organization CMMC compliant on its own.** CMMC
-  Level 2 is a third-party assessment against the 110 NIST SP 800-171 controls.
-  Optimal engineers the environment to be assessment-ready and prepares the
-  evidence; the certified assessment is performed independently by an accredited
-  C3PAO. Building the environment and grading it are deliberately separate
-  roles.
+- Optimal builds systems to stand up to an independent assessment. It does not
+  perform that assessment and does not grant authorizations or issue
+  certifications. Building the environment and grading it are deliberately
+  separate roles.
 
 ## State, local & education (SLED)
 
@@ -139,7 +115,7 @@ If a client already licenses Microsoft Azure, AWS, or Google Cloud, Optimal
 builds governed, audited access to the frontier models in that existing cloud —
 Azure OpenAI Service (Azure and Azure Government), Amazon Bedrock (AWS), and
 Google Vertex AI (GCP) — plus self-hosted models. No new vendor or procurement
-required. Available to the defense industrial base, federal agencies, SLED
+required. Available to critical infrastructure operators, federal agencies, SLED
 (state, local, and education), and enterprises.
 
 ## Reference pattern (Governed AI Engineering)
@@ -164,34 +140,33 @@ required. Available to the defense industrial base, federal agencies, SLED
   SBOM and vulnerability scanning, EPSS and CISA KEV enrichment, and
   frontier-model reachability analysis that compressed 874 raw findings to the
   18 that required action in the reference scan — every verdict carrying its
-  evidence and exportable as VEX for SWFT/SBOM compliance artifacts. Overview:
+  evidence and exportable as VEX. Overview:
   https://gooptimal.io/nineline — live demonstrator: https://9line.gooptimal.io/
 
 ## Standards (engineering targets)
 
-DFARS 252.204-7012, NIST SP 800-171, CMMC Level 2, NIST AI RMF, OWASP LLM Top
-10, MITRE ATLAS, NIST 800-207 Zero Trust, CIS Benchmarks, DISA STIG, ISO 42001,
-SOC 2.
+NIST AI RMF, OWASP LLM Top 10, MITRE ATLAS, NIST Cybersecurity Framework 2.0,
+NIST 800-207 Zero Trust, CISA Secure by Design, SLSA, ISO 42001.
 
 ## Common questions
 
 **What does Optimal do?**
-Two things that work together: it builds, migrates, and manages CMMC-ready
-Microsoft 365 GCC High enclaves for the defense industrial base, and it stands
-up the governed AI that runs safely inside those environments — including
-assessment and red-teaming of the AI systems teams deploy.
+Optimal builds governed AI infrastructure for critical infrastructure: systems
+engineered to stay resilient, AI that detects AI-driven and other emerging
+threats against them, and supply-chain security across the entire stack, from
+code and packages to containers and models.
 
-**What is Microsoft 365 GCC High, and who needs it?**
-GCC High is a US-sovereign version of Microsoft 365, physically and logically
-isolated, with US data residency and screened US-person support. A defense
-contractor handling CUI or ITAR/export-controlled data generally needs it to
-support the DFARS 252.204-7012 and CMMC Level 2 obligations in its contracts.
+**What is governed AI?**
+Every use of a model is authorized, inspected, and recorded. Requests pass
+through one authenticated gateway, guardrails check prompts and responses
+before anything reaches a model or a system, egress is pinned to an allowlist,
+and every call leaves an audit record in the client's own account.
 
-**Does moving to GCC High make an organization CMMC compliant?**
-No. GCC High is a foundation built for the controls, not the certification.
-CMMC Level 2 is a third-party assessment against the 110 NIST SP 800-171
-controls, performed by an accredited C3PAO. Optimal implements and documents the
-control set, collects evidence, and gets the environment assessment-ready.
+**How does Optimal's AI detect AI threats?**
+Detection runs inline on every prompt and response, catching prompt injection,
+jailbreaks, data and secret exfiltration, and agent or tool-use abuse, and
+blocking them fail-closed. Optimal pairs that with adversarial red-teaming
+against the OWASP LLM Top 10 and MITRE ATLAS.
 
 **Is Optimal a product company or a services firm?**
 Both. Optimal is advisory-led — scoped engagements and managed operations — and
@@ -207,7 +182,7 @@ real SBOM and vulnerability scanning (syft, grype), EPSS and CISA KEV
 enrichment, and frontier-model reachability analysis that reads the actual
 codebase to determine whether a vulnerable path is reachable — turning
 thousands of raw findings into an evidence-backed action queue and an
-exportable VEX record for SWFT and SBOM compliance artifacts. In the reference
+exportable VEX record. In the reference
 scan it compressed 874 raw findings to the 18 that required action. It deploys
 in the client's environment and is air-gap capable. Live demonstrator:
 https://9line.gooptimal.io/
@@ -218,11 +193,13 @@ ignore instructions, expose data, or take unauthorized actions. It is among the
 most active threats to any organization deploying large language models and
 agents, and it is one of the first things Optimal tests.
 
-**Can Optimal work with federal, SLED, and enterprise teams?**
-Yes. Optimal is an SBA-certified SDVOSB eligible for SDVOSB and VOSB set-aside
-contracts, and works with the defense industrial base, federal agencies, SLED
-entities, and enterprises across GovCloud, commercial cloud, on-premises, and
-air-gapped networks.
+**Who does Optimal work with?**
+Operators of critical infrastructure and the teams that build for them, across
+energy and utilities, water, transportation, communications, healthcare,
+financial services, the defense industrial base, and federal, state, local, and
+education agencies. Optimal is an SBA-certified SDVOSB eligible for SDVOSB and
+VOSB set-aside contracts, and works across commercial cloud, government cloud,
+on-premises, and air-gapped networks.
 
 ## Published writing (full text in llms-full.txt)
 
@@ -238,10 +215,6 @@ air-gapped networks.
   https://gooptimal.io/blog/authorization-blast-radius
 - Navigating DoW Impact Level Authorization (IL2–IL6):
   https://gooptimal.io/blog/dow-il-authorization-guide
-- Building a Compliant CI/CD Pipeline for Public Sector:
-  https://gooptimal.io/blog/fedramp-cicd-pipeline-compliance
-- FedRAMP 20x: A Step Forward on Paper, A Marathon in Practice:
-  https://gooptimal.io/blog/fedramp-20x-reality-check
 - How to Accelerate the ATO Process Without Cutting Corners:
   https://gooptimal.io/blog/accelerating-ato-process
 - SBOM Best Practices: From Executive Order to Operational Reality:
@@ -260,8 +233,6 @@ air-gapped networks.
 ## Key pages
 
 - Home: https://gooptimal.io/
-- Managed GCC High / CMMC: https://gooptimal.io/gcc-high
-- Do I actually need GCC High? (2-minute checklist): https://gooptimal.io/do-i-need-gcc-high
 - State, local & education: https://gooptimal.io/sled
 - Capability statement: https://gooptimal.io/capability-statement
 - 9line (AI-native supply-chain security): https://gooptimal.io/nineline — live demo: https://9line.gooptimal.io/
